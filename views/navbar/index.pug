@@ -1,0 +1,20 @@
+extends ../layouts/common.pug
+
+block content
+    .nav
+        .container-fluid(class='bg-light ')
+            .row
+                .nav-img(class='col-xl-8 d-flex')
+                    img(src="/img/logo.jpg" width="60" height="80" class="rounded-circle")
+                    h1 Coders.Tokyo
+                .nav-link(class='col-xl-4 d-flex align-items-center')
+                    ul(class='d-flex list-group link-list ')
+                            li(class="mr-4 bg-info list-group-item text-white h-50")
+                                a(href="/users") Home
+                            li(class="mr-4 bg-info list-group-item text-white h-50")
+                                a(href="/users/create") Create
+                    .d-flex
+                        form
+                            .input-group
+                                input(type="text" class="form-control mr-3" aria-label="Small" aria-describedby="inputGroup-sizing-sm" , name = 'name')
+                        button(class="btn btn-info btn-sm" type="button") Submit
