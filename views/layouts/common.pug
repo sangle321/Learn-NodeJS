@@ -9,10 +9,12 @@ html
                 span.navbar-toggler-icon
             #navbarNavAltMarkup.collapse.navbar-collapse
                 .navbar-nav
-                a.nav-item.nav-link.active(href='/')
+                a.nav-item.nav-link.active(href='/home')
                     | Home 
                 a.nav-item.nav-link(href='/users') Users
 
+            if user
+                p= user.name
         .container.pt-5
             block content
 

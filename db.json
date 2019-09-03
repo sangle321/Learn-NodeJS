@@ -2,7 +2,9 @@
   "users": [
     {
       "name": "Lê Văn Sang",
-      "id": "yDsFgI39C"
+      "id": "yDsFgI39C",
+      "email": "sang@gmail.com",
+      "password": "e10adc3949ba59abbe56e057f20f883e"
     },
     {
       "name": "livelover",
@@ -17,6 +19,11 @@
       "name": "Boom",
       "phone": "0799140056",
       "id": "Iht-pfqZn"
+    },
+    {
+      "name": "sang12",
+      "phone": "0799140056",
+      "id": "UgrPBGJvb"
     }
   ]
 }

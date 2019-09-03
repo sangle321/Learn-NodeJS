@@ -1,25 +1,24 @@
 const express = require('express')
 const router = express.Router()
-const bodyParse = require('body-parser')
-const shortId = require('shortid')
+var cookies = require("cookie-parser");
+
+const authMiddleware = require('../middlewares/auth.middleware')
 
 const controller = require('../controllers/user.controller')
-
-const db = require('../db')
+const validate = require('../routers/validate/users.validate')
 
 
 router.get('/admin', (req, res) => res.send('Hello world'));
 
-router.get('', controller.index);
+router.get('' , controller.index);
 
 router.get('/search', controller.search);
 
 router.get('/create', controller.create);
 
-router.post('/create', controller.postCreate);
+router.post('/create',validate.postCreate, controller.postCreate);
 
 router.get('/:id', controller.get);
 
-// router.get('/home', controller.home);
 
 module.exports = router;
